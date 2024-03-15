@@ -12,6 +12,7 @@ class EmailController extends Controller
         // return $user;
         $details = [];
         foreach($data as $key=>$value){
+            $details[$key]['user_id'] = $value->user_id;
             $details[$key]['user_name'] = $value->user->name;
             $details[$key]['user_email'] = $value->user->email;
             $details[$key]['message'] = $value->message;
