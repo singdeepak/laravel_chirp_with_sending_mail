@@ -35,5 +35,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('email', [EmailController::class, 'email']);
+Route::get('/send', [EmailController::class, 'sendMail']);
+
+
+#Route::get('email', [EmailController::class, 'email']);
 require __DIR__.'/auth.php';
